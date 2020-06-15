@@ -22,10 +22,6 @@ document.addEventListener("click", (e)=>{
     }
 })
 
-function textToHTML(text){
-    return `<p>${text}</p>`.replace(new RegExp("\t","gi"), " ").replace(new RegExp("\n","gi"), "</p><p>").replace(new RegExp("<p>[\n ]*</p>", "gi"), "")
-}
-
 function rangeOverlap(start1, end1, start2, end2){
     if(end1 < start2 || end2 < start1){
         return false
